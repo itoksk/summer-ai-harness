@@ -1,0 +1,93 @@
+name: "Day reflection / 1日の振り返り"
+description: "Record how your thinking moved during one day of the course / 1日分の思考の流れを記録する"
+title: "[Day] "
+labels: ["status:ready", "type:reflection", "portfolio:show"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the one record for a whole day (Day 1–5).**
+        Write in English or Japanese — either is fine. The goal is not a perfect answer.
+        The goal is to show what you wondered, what you guessed, what you checked, and how your view changed.
+
+        **これは1日分（Day 1〜5）のまとめ記録です。**
+        英語でも日本語でも大丈夫。きれいな答えを書くことが目的ではありません。
+        「何を不思議に思い、どう予想し、何を確かめ、どう考えが変わったか」を残すのが目的です。
+  - type: dropdown
+    id: day
+    attributes:
+      label: "Day / 日"
+      description: "Which day is this reflection for? / これは何日目の振り返り?"
+      options:
+        - "Day 1 — AI Playground"
+        - "Day 2 — Language AI"
+        - "Day 3 — Data & Machines That See"
+        - "Day 4 — Vibe Coding"
+        - "Day 5 — Build & Demo Day"
+    validations:
+      required: true
+  - type: textarea
+    id: what_i_did
+    attributes:
+      label: "What I did today / 今日やったこと"
+      description: "The main things you made, tried, or explored today. / 今日作った・試した・調べたことの主なもの。"
+    validations:
+      required: true
+  - type: textarea
+    id: my_guesses
+    attributes:
+      label: "My guesses (from my notes) / 予想（メモから）"
+      description: "Before the activities, what did you think? Use the guesses you jotted on paper. It's fine to be wrong. / 活動の前の予想。紙にメモした予想を使う。間違っていてOK。"
+    validations:
+      required: true
+  - type: textarea
+    id: what_i_checked
+    attributes:
+      label: "What I checked / 確かめたこと"
+      description: "What did you build, try, observe, or ask to test your guesses? / 予想を確かめるために何を作り、試し、観察し、聞いた?"
+    validations:
+      required: false
+  - type: textarea
+    id: what_changed
+    attributes:
+      label: "What changed / 考えが変わったところ"
+      description: "Where did your view shift from your first guesses? / 最初の予想から、どこで見方が変わった?"
+    validations:
+      required: false
+  - type: textarea
+    id: insight
+    attributes:
+      label: "Insight / 気づき"
+      description: "One thing you can now explain in your own words. / 自分の言葉で説明できるようになったこと。"
+    validations:
+      required: false
+  - type: textarea
+    id: next_time
+    attributes:
+      label: "How I'll use this next / 次にどう使うか"
+      description: "Next time you see a similar problem, what will you check first? / 次に似た問題を見たら、まず何を確認する?"
+    validations:
+      required: false
+  - type: dropdown
+    id: ai_tool
+    attributes:
+      label: "Which AI helped / 一緒に考えたAI"
+      description: "The local AI you ran in the terminal / ターミナルで動かしたローカルAI"
+      options:
+        - "vibe-local"
+        - "Ollama"
+        - "Other / その他"
+        - "None / なし"
+    validations:
+      required: false
+  - type: textarea
+    id: done
+    attributes:
+      label: "Done checklist / 完了チェック"
+      value: |
+        - [ ] I wrote my guesses from my paper notes / 紙のメモから予想を書いた
+        - [ ] I recorded what changed in my thinking / 考えが変わったところを書いた
+        - [ ] I can explain one insight in my own words / 気づきを自分の言葉で言える
+        - [ ] I wrote how I'll use this next time / 次にどう使うか書いた
+    validations:
+      required: false

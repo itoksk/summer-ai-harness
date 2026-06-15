@@ -1,0 +1,38 @@
+[
+  { "name": "day:1", "description": "Day 1 — AI Playground / 1日目 AIプレイグラウンド", "color": "1f77b4" },
+  { "name": "day:2", "description": "Day 2 — Language AI / 2日目 言語AI", "color": "2858a6" },
+  { "name": "day:3", "description": "Day 3 — Data & Machines That See / 3日目 データと見る機械", "color": "08736e" },
+  { "name": "day:4", "description": "Day 4 — Vibe Coding / 4日目 バイブコーディング", "color": "507b3a" },
+  { "name": "day:5", "description": "Day 5 — Build & Demo Day / 5日目 完成とデモデイ", "color": "d97732" },
+
+  { "name": "type:concept", "description": "Understand an idea or how something works / 言葉や仕組みを理解する", "color": "5319e7" },
+  { "name": "type:build", "description": "Make or code something / 何かを作る・コードを書く", "color": "5319e7" },
+  { "name": "type:create", "description": "Creative output: image, music, video / 画像・音楽・動画などの創作", "color": "5319e7" },
+  { "name": "type:experiment", "description": "Try something and observe what happens / 試して観察する", "color": "5319e7" },
+  { "name": "type:security", "description": "Break it or defend it on purpose / わざと壊す・守る", "color": "d73a4a" },
+  { "name": "type:reflection", "description": "Look back: what I learned and what is next / 振り返り・次に使うこと", "color": "0b6b75" },
+  { "name": "type:question", "description": "A question that came up during the day / その日に出た問い", "color": "5319e7" },
+  { "name": "type:stuck", "description": "Got stuck, something broke, or I was wrong during the day / その日に詰まった・壊れた・間違えた", "color": "d73a4a" },
+
+  { "name": "status:ready", "description": "Ready to start / すぐに始められる", "color": "0e8a16" },
+  { "name": "status:in-progress", "description": "Working on it now / いま取り組み中", "color": "fbca04" },
+  { "name": "status:reviewing", "description": "Rethinking or reviewing my answer / 見直し・考え直し中", "color": "fbca04" },
+  { "name": "status:done", "description": "Finished and recorded / 終わって記録済み", "color": "cfd3d7" },
+
+  { "name": "needs:hint", "description": "I want a hint first, not the answer / まずヒントがほしい", "color": "d4c5f9" },
+  { "name": "needs:explanation", "description": "Explain it step by step / 順番に説明してほしい", "color": "d4c5f9" },
+  { "name": "needs:example", "description": "Show a similar example / 似た例がほしい", "color": "d4c5f9" },
+  { "name": "needs:review", "description": "Check my own work / 自分の答えを見てほしい", "color": "d4c5f9" },
+  { "name": "needs:teacher-check", "description": "A teacher should also look / 先生にも確認してほしい", "color": "d4c5f9" },
+
+  { "name": "difficulty:easy", "description": "Easy challenge tier / 初級チャレンジ", "color": "c2e0c6" },
+  { "name": "difficulty:medium", "description": "Medium challenge tier / 中級チャレンジ", "color": "fef2c0" },
+  { "name": "difficulty:hard", "description": "Hard challenge tier / 上級チャレンジ", "color": "f9d0c4" },
+
+  { "name": "ai-tool:ollama", "description": "I thought this through with Ollama / Ollamaと一緒に考えた", "color": "bfd4f2" },
+  { "name": "ai-tool:vibe-local", "description": "I thought this through with vibe-local / vibe-localと一緒に考えた", "color": "bfd4f2" },
+  { "name": "ai-tool:other", "description": "I used another AI helper / 別のAIを使った", "color": "bfd4f2" },
+
+  { "name": "portfolio:show", "description": "Show on the web thinking report / Web思考レポートに載せる", "color": "0b6b75" },
+  { "name": "portfolio:hide", "description": "Keep off the web thinking report / Web思考レポートに載せない", "color": "6e7781" }
+]

@@ -1,0 +1,20 @@
+{
+  "name": "summer-ai-study-harness",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "Per-day thinking-process harness for the Canadian Academy AI intensive course / AI集中講座の1日単位 思考プロセス記録ハーネス",
+  "scripts": {
+    "check": "node scripts/check-harness.mjs",
+    "sync": "node scripts/sync-from-template.mjs",
+    "sync-labels": "node scripts/sync-labels.mjs",
+    "new:day": "node scripts/new-day-issue.mjs",
+    "build:portfolio": "node scripts/build-portfolio.mjs",
+    "build:thinking-depth": "node scripts/build-thinking-depth-html.mjs",
+    "harness:end-report": "node scripts/build-thinking-depth-html.mjs"
+  },
+  "devDependencies": {
+    "yaml": "^2.8.1"
+  }
+}

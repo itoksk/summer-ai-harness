@@ -1,0 +1,62 @@
+name: Day labeler
+
+# When an issue is created or edited through the web Issue form, read the
+# "Day" dropdown value from the body and apply the day:N label — creating it
+# from config/labels.json if it doesn't exist yet — so issues can be filtered
+# and collected by day with NO local GitHub CLI.
+# Issues made with `npm run new:day` already get this label; this keeps the
+# browser path consistent.
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply day label from issue body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const body = context.payload.issue.body || "";
+            const want = [];
+
+            const dayMatch = body.match(/Day\s*([1-5])\s*[—\-–]/);
+            if (dayMatch) want.push("day:" + dayMatch[1]);
+
+            if (want.length === 0) {
+              core.info("No Day value found in the issue body.");
+              return;
+            }
+
+            const { owner, repo } = context.repo;
+            let defs = [];
+            try { defs = JSON.parse(fs.readFileSync("config/labels.json", "utf8")); } catch (e) {}
+
+            // Ensure each label exists (create from config if missing) so addLabels never fails.
+            for (const name of want) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name });
+              } catch (e) {
+                if (e.status === 404) {
+                  const d = defs.find((x) => x.name === name) || { color: "ededed", description: "" };
+                  await github.rest.issues.createLabel({ owner, repo, name, color: d.color, description: d.description });
+                  core.info("created " + name);
+                }
+              }
+            }
+
+            await github.rest.issues.addLabels({
+              owner,
+              repo,
+              issue_number: context.issue.number,
+              labels: want,
+            });
+            core.info("Applied labels: " + want.join(", "));

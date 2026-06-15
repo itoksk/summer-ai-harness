@@ -1,0 +1,59 @@
+name: "Stuck / broke / I was wrong / 詰まった・壊れた・間違えた"
+description: "Analyse something that went wrong, instead of just fixing it / ただ直すのではなく、なぜそうなったかを整理する"
+title: "[Stuck] "
+labels: ["status:ready", "type:stuck", "needs:review", "portfolio:show"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The point is not the fix. The point is understanding WHY it happened, so it does not happen again.
+
+        大事なのは「直すこと」ではありません。「なぜ起きたか」を理解して、次に防ぐことです。
+  - type: dropdown
+    id: day
+    attributes:
+      label: "Day / 日"
+      description: "Which day did this happen? / これは何日目に起きた?"
+      options:
+        - "Day 1 — AI Playground"
+        - "Day 2 — Language AI"
+        - "Day 3 — Data & Machines That See"
+        - "Day 4 — Vibe Coding"
+        - "Day 5 — Build & Demo Day"
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: "What happened / 何が起きたか"
+      description: "The error, the wrong output, or where you got stuck / エラー・おかしな出力・詰まった場所"
+    validations:
+      required: true
+  - type: textarea
+    id: what_i_tried
+    attributes:
+      label: "What I tried / 自分でやってみたこと"
+      description: "What did you do before asking for help? / 助けを求める前に何をした?"
+    validations:
+      required: true
+  - type: textarea
+    id: why_i_think
+    attributes:
+      label: "Why I think it happened / なぜ起きたと思うか"
+      description: "Your own guess about the cause / 原因についての自分の予想"
+    validations:
+      required: true
+  - type: textarea
+    id: what_changed
+    attributes:
+      label: "What changed in my thinking / 考えが変わったところ"
+      description: "After checking, what did you realise about the real cause? / 確かめた後、本当の原因について何に気づいた?"
+    validations:
+      required: false
+  - type: textarea
+    id: next_time
+    attributes:
+      label: "How I'll avoid it next time / 次に防ぐには"
+      description: "What will you check first next time? / 次は最初に何を確認する?"
+    validations:
+      required: false

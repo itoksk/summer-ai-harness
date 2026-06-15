@@ -1,0 +1,64 @@
+name: "A question came up / 問いが出た"
+description: "Record a question or doubt that appeared during the day / その日に出た疑問・確かめたいことを記録する"
+title: "[Question] "
+labels: ["status:ready", "type:question", "portfolio:show"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a real question pops up in the middle of an activity.
+        First write what YOU think, then ask your local AI for a hint — not the full answer.
+
+        活動の途中で出た「本物の問い」を残すためのテンプレートです。
+        まず自分の考えを書き、それからローカルAIにヒント（答えそのものではなく）をもらいましょう。
+  - type: dropdown
+    id: day
+    attributes:
+      label: "Day / 日"
+      description: "Which day did this question come up? / この問いは何日目に出た?"
+      options:
+        - "Day 1 — AI Playground"
+        - "Day 2 — Language AI"
+        - "Day 3 — Data & Machines That See"
+        - "Day 4 — Vibe Coding"
+        - "Day 5 — Build & Demo Day"
+    validations:
+      required: true
+  - type: input
+    id: question
+    attributes:
+      label: "Question / 問い"
+      description: "What do you want to figure out? / 何を解き明かしたい?"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Where it came from / どこで出てきたか"
+      description: "What were you doing when this question appeared? / この問いはどんな場面で出てきた?"
+    validations:
+      required: false
+  - type: textarea
+    id: my_first_guess
+    attributes:
+      label: "My first guess / 最初の予想"
+      description: "Even if unsure, what's your own answer right now? / 自信がなくても、今の自分の答えは?"
+    validations:
+      required: true
+  - type: textarea
+    id: what_i_checked
+    attributes:
+      label: "What I checked / 確かめたこと"
+      description: "What did you try, read, or ask to test your guess? / 予想を確かめるために何を試し・調べ・聞いた?"
+    validations:
+      required: false
+  - type: textarea
+    id: done
+    attributes:
+      label: "Done checklist / 完了チェック"
+      value: |
+        - [ ] I wrote my own guess first / まず自分の予想を書いた
+        - [ ] I recorded what changed / 考えが変わったところを書いた
+        - [ ] I can explain the answer in my own words / 答えを自分の言葉で言える
+    validations:
+      required: false

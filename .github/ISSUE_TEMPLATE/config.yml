@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "Day map / 日程一覧"
+    url: https://github.com/itoksk/summer-ai-harness/blob/main/docs/day-map.md
+    about: "All 5 days and their essential questions / 5日間と問いの一覧"
+  - name: "How to use a local AI / ローカルAIの使い方"
+    url: https://github.com/itoksk/summer-ai-harness/blob/main/docs/using-local-llm.md
+    about: "Run vibe-local or Ollama from the terminal / vibe-local・Ollamaの使い方"

@@ -1,0 +1,120 @@
+{
+  "course": {
+    "en": "Canadian Academy AI Intensive",
+    "jp": "Canadian Academy AI集中講座"
+  },
+  "days": [
+    {
+      "day": 1,
+      "theme": "playground",
+      "slug": "day1",
+      "title": { "en": "AI Playground", "jp": "AIプレイグラウンド" },
+      "focus": {
+        "en": "Make your first AI things; notice that the same words give different results.",
+        "jp": "初めてAIで作る。同じ言葉でも結果が違うことに気づく。"
+      },
+      "questions": [
+        {
+          "en": "If everyone types the same words, why does each person get something different?",
+          "jp": "全員が同じ言葉を打つのに、なぜ一人ひとり違うものが出るのか?"
+        },
+        {
+          "en": "If an AI made the picture from your words, whose creation is it really?",
+          "jp": "AIが君の言葉から作った絵は、本当は誰の作品なのか?"
+        },
+        {
+          "en": "Can you direct several AIs into one piece that feels truly yours — and put it where the whole world can see it?",
+          "jp": "複数のAIを演出して本当に自分のものと言える作品を作り、それを世界に見せられるか?"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "language-ai",
+      "slug": "day2",
+      "title": { "en": "Language AI", "jp": "言語AI" },
+      "focus": {
+        "en": "See how words become numbers, and read a 200-line GPT — no magic, just code.",
+        "jp": "言葉が数字になる仕組みと、200行のGPTを読む。魔法ではなくコード。"
+      },
+      "questions": [
+        {
+          "en": "How can a computer, which only knows numbers, possibly understand words?",
+          "jp": "数字しか分からないコンピュータが、どうやって言葉を理解できるのか?"
+        },
+        {
+          "en": "Is there any magic inside an AI — or is it just code you could read?",
+          "jp": "AIの中に魔法はあるのか — それとも、ただの読めるコードなのか?"
+        },
+        {
+          "en": "Once an AI is made of YOUR words, who controls it — and how safe is it?",
+          "jp": "AIが「自分のことば」でできたとき、誰がそれを握り、どれだけ安全なのか?"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "data-vision",
+      "slug": "day3",
+      "title": { "en": "Data & Machines That See", "jp": "データと「見る」機械" },
+      "focus": {
+        "en": "Turn people into data, teach a machine to see, and decide when to trust the math.",
+        "jp": "人をデータにし、機械に見せ、数学を信じるか自分で決める。"
+      },
+      "questions": [
+        {
+          "en": "If a person can be turned into a row of numbers, can math see who you are most like?",
+          "jp": "人が数字の並びになるなら、数学は「誰に一番似ているか」を見抜けるのか?"
+        },
+        {
+          "en": "How does a machine learn to SEE — and what is it really looking at when it gets fooled?",
+          "jp": "機械はどうやって「見る」ことを学ぶのか — そして騙されるとき、本当は何を見ているのか?"
+        },
+        {
+          "en": "When the math gives you an answer, how do you know whether to TRUST it — and when do YOU decide instead?",
+          "jp": "数学が答えを出したとき、それを信じてよいかどう見極め、いつ「自分」が決めるのか?"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "vibe-coding",
+      "slug": "day4",
+      "title": { "en": "Vibe Coding (Build)", "jp": "バイブコーディング（つくる）" },
+      "focus": {
+        "en": "Build a real app with AI while staying in the driver's seat.",
+        "jp": "運転席に座ったまま、AIと本物のアプリを作る。"
+      },
+      "questions": [
+        {
+          "en": "How do you stay in the driver's seat while an AI writes the code for you?",
+          "jp": "AIにコードを書かせながら、どうやって自分が運転席に座り続けるのか?"
+        },
+        {
+          "en": "Now that you can build something real, what does it mean to build it responsibly and finish it?",
+          "jp": "本物を作れるようになった今、それを責任をもって作り、やり切るとはどういうことか?"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "theme": "demo-day",
+      "slug": "day5",
+      "title": { "en": "Build & Demo Day (Deliver)", "jp": "完成とデモデイ（とどける）" },
+      "focus": {
+        "en": "Finish, rehearse, present — and decide who you become after the course.",
+        "jp": "仕上げ、リハーサル、発表。そしてコース後の自分を決める。"
+      },
+      "questions": [
+        {
+          "en": "With time almost gone, do you add more, or make what you already have unforgettable?",
+          "jp": "残り時間がわずかな今、足すのか、それとも今あるものを忘れられないものにするのか?"
+        },
+        {
+          "en": "Now that you can build AI, who do you become when the course ends?",
+          "jp": "AIを作れるようになった今、コースが終わったとき君は何者になるのか?"
+        }
+      ]
+    }
+  ]
+}

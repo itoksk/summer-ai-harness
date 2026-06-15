@@ -1,0 +1,44 @@
+name: Sync labels
+
+# Create/update the issue labels from config/labels.json using the built-in
+# GITHUB_TOKEN — no local GitHub CLI needed. After copying the template, run this
+# once: GitHub -> your repo -> Actions tab -> "Sync labels" -> Run workflow.
+# It also re-runs automatically whenever config/labels.json changes.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["config/labels.json"]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync:
+    name: Sync labels from config
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const labels = JSON.parse(fs.readFileSync("config/labels.json", "utf8"));
+            const { owner, repo } = context.repo;
+            for (const l of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name: l.name });
+                await github.rest.issues.updateLabel({ owner, repo, name: l.name, new_name: l.name, color: l.color, description: l.description });
+                core.info("updated " + l.name);
+              } catch (e) {
+                if (e.status === 404) {
+                  await github.rest.issues.createLabel({ owner, repo, name: l.name, color: l.color, description: l.description });
+                  core.info("created " + l.name);
+                } else {
+                  throw e;
+                }
+              }
+            }
+            core.info("Label sync complete (" + labels.length + " labels).");
